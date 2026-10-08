@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f7f4">
+    <title>AI Chat Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="chat-window" id="chatWindow" aria-label="AI chat" aria-hidden="true">
+        <header class="chat-header">
+            <div class="assistant-info"><h1>Chat</h1></div>
+            <button class="close-button" id="closeChat" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        </header>
+
+        <div class="chat" id="messages" role="log" aria-live="polite" aria-relevant="additions text">
+            <div class="model"><p>Hi there!<br>How can I help you today?</p></div>
+        </div>
+
+        <form class="input-area" id="chatForm">
+            <label class="sr-only" for="messageInput">Your message</label>
+            <textarea id="messageInput" rows="1" placeholder="Type a message…" autocomplete="off" required></textarea>
+            <button class="send-button" type="submit" aria-label="Send message">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 10.5 13.5M21 3l-6.7 18-3.8-7.5L3 9.7 21 3Z"/></svg>
+            </button>
+        </form>
+    </section>
+
+    <button class="chat-button" id="openChat" type="button" aria-label="Open chat" aria-expanded="false">
+        <svg class="chat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H7l-4 2 1.3-4A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 11h8M8 14h5"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
